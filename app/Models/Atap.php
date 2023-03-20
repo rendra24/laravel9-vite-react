@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Aset extends Model
+class Atap extends Model
 {
     use HasFactory;
+    protected $table = 'atap';
      /**
      * fillable
      *
