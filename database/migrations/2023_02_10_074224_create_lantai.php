@@ -15,6 +15,7 @@ class CreateLantai extends Migration
     {
         Schema::create('lantai', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
             $table->timestamps();
         });
     }
