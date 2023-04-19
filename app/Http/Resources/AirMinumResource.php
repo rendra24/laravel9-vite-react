@@ -15,10 +15,8 @@ class AirMinumResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'data' => [
                 'id' => $this->id,
                 'nama' => $this->nama,
-            ]
         ];
     }
 }
