@@ -1,3 +1,4 @@
+import Pagination from '@/Components/Pagination';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 
@@ -5,7 +6,7 @@ export default function List(props) {
 
     console.log(props.surat)
 
-    const DataSurat=props.surat.map(
+    const DataSurat=props.surat.data.map(
         (row)=>{
             return(
                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -30,6 +31,11 @@ export default function List(props) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+
+                    <div class="p-6 text-gray-900 dark:text-gray-100 text-right">
+
+                    <a href="{route('surat.create')}"><button type="button" class="button-primary">Buat Surat
+                            Baru</button></a>
 
 
                         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -56,8 +62,9 @@ export default function List(props) {
 
                             </tbody>
                         </table>
+                        <Pagination class="mt-6" links={props.surat.links} />
                         </div>
-
+                    </div>
 
 
                     </div>
